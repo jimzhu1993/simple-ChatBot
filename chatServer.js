@@ -89,7 +89,7 @@ function bot(data,socket,questionNum) {
     }else{
         answer= 'Ops, wrong answer, You got 2 questions right';// output response
         waitTime = 2000;
-        question = 'Now, this question is twice difficult as the sum of the previous two';			    	// load next question
+        question = 'Now, this question is twice difficult as the combination of the previous two';			    	// load next question
         waitTime = 2000;
         questionNum--;
     }
@@ -154,7 +154,7 @@ function bot(data,socket,questionNum) {
     if (input == 'HAPPY'){
       answer= 'Congraduation! You are the ultimate winner';// output response
       waitTime = 2000;
-      question = 'Thank you for paticipating!'
+      answer = 'Thank you for paticipating!'
     }else{
         answer= 'Ops, wrong answer, You got 7 questions right';// output response
         waitTime = 2000;
