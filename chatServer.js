@@ -51,7 +51,7 @@ function bot(data,socket,questionNum) {
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
-    socket.emit('changeFont','white');
+    // socket.emit('changeFont','white');
     answer= 'Hello ' + input + '! Let\'s play a puzzle game. All answers are consists of numbers and uppercase letters';// output response
     waitTime =4000;
     question = 'Let\'s say the answer to the first tricky question is \'1\', then you type \'1\' as your result, so what is the answer to the first question?';			    	// load next question
