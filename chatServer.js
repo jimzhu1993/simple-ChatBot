@@ -51,28 +51,29 @@ function bot(data,socket,questionNum) {
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
-    answer= 'Hello ' + input + '! Let\'s play a puzzle game.\n All answer are consists of numbers and uppercase letters';// output response
-    waitTime =2000;
-    question = 'Let\'s say the answer to the first tricky question is \'1\', then you type \'1\' as your result, so what is the answer to this question?';			    	// load next question
+    socket.emit('changeFont','white');
+    answer= 'Hello ' + input + '! Let\'s play a puzzle game. All answers are consists of numbers and uppercase letters';// output response
+    waitTime =4000;
+    question = 'Let\'s say the answer to the first tricky question is \'1\', then you type \'1\' as your result, so what is the answer to the first question?';			    	// load next question
   }
   else if (questionNum == 1) {
     if (input == '1') {
-        answer= 'Correct, this question is too easy to trick you.';// output response
+        answer= 'Correct, is this question too easy for you.';// output response
         waitTime = 2000;
         question = 'Should we make it a little more tricky?';			    	// load next question
     }else{
         answer= 'Ops, wrong answer, You got 0 question right.';// output response
         waitTime = 2000;
-        question = 'Let\'s say the answer to the first tricky question is \'1\', then you type \'1\' as your result, so what is the answer to this question?';			    	// load next question;
+        question = 'Let\'s say the answer to the first tricky question is \'1\', then you type \'1\' as your result, so what is the answer to the first question?';			    	// load next question
         waitTime = 2000;
         questionNum--;
     }
   }
   else if (questionNum == 2) {
     if (input == '2'){
-      answer= 'Correct, you are not not dumb as I thought you are.';// output response
+      answer= 'Correct, you are getting better.';// output response
       waitTime = 2000;
-      question = 'Now, this question is twice difficult as the sum of the previous two';			    	// load next question
+      question = 'Now, this question is twice difficult as the combination of the previous two';			    	// load next question
     }else{
         answer= 'Ops, wrong answer, You got only 1 question right';// output response
         waitTime = 2000;
@@ -83,9 +84,9 @@ function bot(data,socket,questionNum) {
   }
   else if (questionNum == 3) {
     if (input == '6'){
-      answer= 'Correct, now I guess you are good at math.';// output response
+      answer= 'Correct, I guess you are good at math.';// output response
       waitTime = 2000;
-      question = 'LOL, do you really think I have questions all like this?\nTYU\nBNM';			    	// load next question
+      question = 'LOL, do you really think I have questions all like this? TYU, BNM';			    	// load next question
     }else{
         answer= 'Ops, wrong answer, You got 2 questions right';// output response
         waitTime = 2000;
@@ -98,11 +99,11 @@ function bot(data,socket,questionNum) {
     if (input == 'GHJ'){
       answer= 'Correct, you are indeed really smart.';// output response
       waitTime = 2000;
-      question = 'Now things are getiing more elusive\nU KICW TIY';			    	// load next question
+      question = 'Now things are getiing more elusive. U KICW TIY';			    	// load next question
     }else{
         answer= 'Ops, wrong answer, You got 3 questions right';// output response
         waitTime = 2000;
-        question = 'LOL, do you really think I have questions all like this?\nTYU\nBNM';			    	// load next question
+        qquestion = 'LOL, do you really think I have questions all like this? TYU, BNM';			    	// load next question
         waitTime = 2000;
         questionNum--;
     }
@@ -116,7 +117,7 @@ function bot(data,socket,questionNum) {
     }else{
         answer= 'Ops, wrong answer, You got 4 questions right';// output response
         waitTime = 2000;
-        question = 'Now things are getiing more elusive\nU KICW TIY';			    	// load next question
+        question = 'Now things are getiing more elusive. U KICW TIY';			    	// load next question
         waitTime = 2000;
         questionNum--;
     }
